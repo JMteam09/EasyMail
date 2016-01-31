@@ -2,10 +2,10 @@
 function email($to,$sub,$txt,$html){
 $json = array();
 $json["who"] = $to;
-$json["sub"] = sub;
+$json["sub"] = $sub;
 $json["txt"] = $txt;
 $json["html"] = $html;
-file_put_contents("C:\easymail.txt",json_encode($json));
+file_put_contents("C:\\easymail.txt",json_encode($json));
 return exec('"EasyMail.exe" -fb -path:C:\\easymail.txt"');
 }
 ?>
