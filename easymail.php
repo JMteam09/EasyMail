@@ -6,6 +6,6 @@ $json["sub"] = $sub;
 $json["txt"] = $txt;
 $json["html"] = $html;
 file_put_contents("C:\\easymail.txt",json_encode($json));
-return exec('"EasyMail.exe" -fb -path:C:\\easymail.txt"');
+return exec('"'.getcwd().'EasyMail.exe" -fb -path:C:\\easymail.txt"');
 }
 ?>
