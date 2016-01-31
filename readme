@@ -1,0 +1,8 @@
+<b>Easy and Fast usage:<\b><br>
+simply start your php script with:<br>
+require(path to easymail.php);<br>
+and then you are ready to use email($to,$subject,$message,$is_html);<br>
+<b>Configuration</b><br>
+Open config.json<br>
+Enter all credentials and network settings.<br>
+And you are ready to go!<br>
