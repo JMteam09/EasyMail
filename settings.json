@@ -1,7 +1,8 @@
-﻿-=User config=-;
-user=user_here;
-pass=pass_here;
--=Connection config=-;
-port=587;
-ssl=true;
-host=smtp.gmail.com;
+﻿{
+	"user":"user_here",
+	"pass":"pass_here",
+	"port":"587",
+	"ssl":"true",
+	"host":"smtp.gmail.com"
+}
+
