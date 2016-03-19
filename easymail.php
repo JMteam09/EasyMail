@@ -5,10 +5,12 @@ $json["who"] = $to;
 $json["sub"] = $sub;
 $json["txt"] = $txt;
 $json["html"] = $html;
-file_put_contents("C:\\easymail.txt",json_encode($json));
-$em_script = 'start "EM" "'.realpath(dirname(__FILE__)).'\\EasyMail.exe" -fb -path:C:\\easymail.txt';
-file_put_contents(dirname(__FILE__)+"/script.bat",json_encode($json));
-exec(dirname(__FILE__)+"/script.bat");
-return "operation started";
+$jso = json_encode($json);
+$name = var_export(rand(0,99),true) . "_" . var_export(rand(0,99),true) . "_" . var_export(rand(0,99),true) . "_" . var_export(rand(0,99),true); 
+file_put_contents(realpath(dirname(__FILE__)).'\\'.$name.".txt", $jso);
+$handle = new COM('WScript.Shell');
+$handle->Run('"'.realpath(dirname(__FILE__)).'\\EasyMail.exe" -fb "-path:'.realpath(dirname(__FILE__)).'\\'.$name.".txt", 0, false);
+unlink(realpath(dirname(__FILE__)).'\\'.$name.".txt");
+return '"'.realpath(dirname(__FILE__)).'\\EasyMail.exe" -fb "-path:'.realpath(dirname(__FILE__)).'\\'.$name.".txt";
 }
 ?>

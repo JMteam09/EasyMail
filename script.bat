@@ -1,0 +1,1 @@
+start "EM" "C:\EM\EasyMail.exe" -fb -path:C:\easymail.txt
