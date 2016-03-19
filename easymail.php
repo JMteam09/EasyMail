@@ -10,7 +10,6 @@ $name = var_export(rand(0,99),true) . "_" . var_export(rand(0,99),true) . "_" . 
 file_put_contents(realpath(dirname(__FILE__)).'\\'.$name.".txt", $jso);
 $handle = new COM('WScript.Shell');
 $handle->Run('"'.realpath(dirname(__FILE__)).'\\EasyMail.exe" -fb "-path:'.realpath(dirname(__FILE__)).'\\'.$name.".txt", 0, false);
-unlink(realpath(dirname(__FILE__)).'\\'.$name.".txt");
 return '"'.realpath(dirname(__FILE__)).'\\EasyMail.exe" -fb "-path:'.realpath(dirname(__FILE__)).'\\'.$name.".txt";
 }
 ?>
