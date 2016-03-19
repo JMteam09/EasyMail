@@ -7,6 +7,6 @@ $json["txt"] = $txt;
 $json["html"] = $html;
 file_put_contents("C:\\easymail.txt",json_encode($json));
 exec('start "'.realpath(dirname(__FILE__)).'\\EasyMail.exe" -fb -path:C:\\easymail.txt');
-return "operation started"
+return "operation started";
 }
 ?>
