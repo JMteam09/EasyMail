@@ -1,6 +1,6 @@
 ﻿{
 	"user":"noreply.jmnet@gmail.com",
-	"pass":"dotje2001",
+	"pass":"",
 	"port":"587",
 	"ssl":"true",
 	"host":"smtp.gmail.com"
